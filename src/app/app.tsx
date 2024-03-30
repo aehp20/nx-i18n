@@ -5,18 +5,34 @@ import UserInfo from "./components/UserInfo";
 export function App() {
   const user = { firstName: "Fanny" };
 
-  const { _, _n, _c, _cn } = useI18NContext();
+  const { setLocale, _, _n, _c, _cn } = useI18NContext();
+
+  const handleES = () => {
+    setLocale("es")
+  }
+  const handleEN = () => {
+    setLocale("en")
+  }
+  const handleFR = () => {
+    setLocale("fr")
+  }
 
   return (
     <div className="flex flex-col gap-1">
+      <button onClick={handleES}>{_("ES")}</button>
+      <button onClick={handleEN}>{_("EN")}</button>
+      <button onClick={handleFR}>{_("FR")}</button>
+
       <Title>{_("Document")}</Title>
+      <UserInfo user={user} />
+
       <div>{_("This is my i18n lib")}</div>
       <div>{_("This {object} is a new entity", {object: "document"})}</div>
       <div>{_("This {object} is a new entity", {object: "product"})}</div>
-      <UserInfo user={user} />
       <div>{_("Hello")}</div>
       <div>{_("How are you?")}</div>
       <div>{_("Thanks")}</div>
+
       <div>{_n("I have one car", "I have two cars", 1)}</div>
       <div>{_n("I have one car", "I have two cars", 2)}</div>
       <div>{_n("I have one car", "I have two cars", 0)}</div>

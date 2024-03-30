@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <StrictMode>
-    <I18NProvider locale="es" urlLoadLocale="http://localhost:4200/translations/es.json">
+    <I18NProvider locale="es" urlApp="http://localhost:4200" folderPath="/translations/">
       <App />
     </I18NProvider>
   </StrictMode>

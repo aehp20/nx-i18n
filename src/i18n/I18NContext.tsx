@@ -5,30 +5,32 @@ const I18NContext = createContext({});
 
 type I18NProviderProps = {
   locale: string;
-  urlLoadLocale: string;
+  urlApp: string;
+  folderPath: string
   children: ReactNode;
 }
 
 export function I18NProvider(props: I18NProviderProps) {
-  const { locale, urlLoadLocale, children } = props;
+  const { locale: originalLocale, urlApp, folderPath, children } = props;
 
+  const [locale, setLocale] = useState(originalLocale);
   const [translator, setTranslator] = useState();
 
   useEffect(() => {
-    async function fetchData() {
-      const loadedJSON = await fetch(urlLoadLocale)
+    async function fetchData(locale) {
+      const loadedJSON = await fetch(`${urlApp}${folderPath}${locale}.json`)
         .then((response) => response.json())
         .then((json) => json);
 
       const translator = new Translator(locale, loadedJSON);
       setTranslator(translator);
     }
-    fetchData();
-  }, []);
+    fetchData(locale);
+  }, [locale]);
 
   const value = useMemo(()=> {
-    return translator ? {locale, _: translator._, _n: translator._n, _c: translator._c, _cn: translator._cn} : {};
-  }, [translator, locale]);
+    return translator ? {locale, setLocale, _: translator._, _n: translator._n, _c: translator._c, _cn: translator._cn} : {};
+  }, [translator, locale, setLocale]);
 
   return translator ? <I18NContext.Provider value={value}>{children}</I18NContext.Provider> : <div>Loading...</div>;
 }
