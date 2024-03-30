@@ -1,0 +1,99 @@
+# French translations for nx-i package
+# Traductions françaises du paquet nx-i.
+# Copyright (C) 2024 THE nx-i'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the nx-i package.
+# Aron <aronherrera2009@gmail.com>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: nx-i 18n\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-30 23:05+0100\n"
+"PO-Revision-Date: 2024-03-30 23:12+0100\n"
+"Last-Translator: Aron <aronherrera2009@gmail.com>\n"
+"Language-Team: French <traduc@traduc.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: /Users/home/learn/github/nx-i18n/src/app/app.tsx:12
+msgid "Document"
+msgstr "Document"
+
+#: /Users/home/learn/github/nx-i18n/src/app/app.tsx:13
+msgid "This is my i18n lib"
+msgstr "Ceci est ma i18n lib"
+
+#: /Users/home/learn/github/nx-i18n/src/app/app.tsx:14
+#: /Users/home/learn/github/nx-i18n/src/app/app.tsx:15
+msgid "This {object} is a new entity"
+msgstr "Ce {object} est une entité"
+
+#: /Users/home/learn/github/nx-i18n/src/app/app.tsx:17
+msgid "Hello"
+msgstr "Salut"
+
+#: /Users/home/learn/github/nx-i18n/src/app/app.tsx:18
+msgid "How are you?"
+msgstr "Comment çava?"
+
+#: /Users/home/learn/github/nx-i18n/src/app/app.tsx:19
+msgid "Thanks"
+msgstr "Merci"
+
+#: /Users/home/learn/github/nx-i18n/src/app/app.tsx:20
+#: /Users/home/learn/github/nx-i18n/src/app/app.tsx:21
+#: /Users/home/learn/github/nx-i18n/src/app/app.tsx:22
+msgid "I have one car"
+msgid_plural "I have two cars"
+msgstr[0] "J'ai une voiture"
+msgstr[1] "J'ai deux voitures"
+
+#: /Users/home/learn/github/nx-i18n/src/app/app.tsx:23
+msgid "{uno} and {dos} have one car"
+msgid_plural "{uno} and {dos} have two cars"
+msgstr[0] "{uno} et {dos} ont une voiture"
+msgstr[1] "{uno} et {dos} ont deux voitures"
+
+#: /Users/home/learn/github/nx-i18n/src/app/app.tsx:25
+msgctxt "ExampleContext"
+msgid "This message is under a context"
+msgstr "Ce message est sous un contexte"
+
+#: /Users/home/learn/github/nx-i18n/src/app/app.tsx:26
+msgctxt "ExampleContext"
+msgid "This {data} is under a context"
+msgstr "Cette {data} est sous un contexte"
+
+#: /Users/home/learn/github/nx-i18n/src/app/app.tsx:27
+msgctxt "ExampleContext"
+msgid "This {object} is under a context"
+msgstr "Ce {object} est sous un contexte"
+
+#: /Users/home/learn/github/nx-i18n/src/app/app.tsx:29
+msgctxt "NewContext"
+msgid "Document"
+msgid_plural "Documents"
+msgstr[0] "Document"
+msgstr[1] "Documents"
+
+#: /Users/home/learn/github/nx-i18n/src/app/app.tsx:30
+msgctxt "NewContext"
+msgid "Book"
+msgid_plural "Books"
+msgstr[0] "Livre"
+msgstr[1] "Livres"
+
+#: /Users/home/learn/github/nx-i18n/src/app/app.tsx:31
+#: /Users/home/learn/github/nx-i18n/src/app/app.tsx:32
+msgctxt "NewContext"
+msgid "My boy {name} has one car"
+msgid_plural "My boy {name} has many cars"
+msgstr[0] "Mon fils {name} a une voiture"
+msgstr[1] "Mon fils {name} a deux voiture"
+
+#: /Users/home/learn/github/nx-i18n/src/app/components/UserInfo.tsx:14
+msgid "My name is {firstName}"
+msgstr ""

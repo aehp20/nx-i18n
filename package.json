@@ -5,10 +5,20 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "po2json": "node scripts/myPo2Json --locale=en",
+    "po2jsonES": "node scripts/myPo2Json --locale=es",
+    "po2jsonFR": "node scripts/myPo2Json --locale=fr"
   },
   "private": true,
   "dependencies": {
+    "@types/gettext.js": "^1.0.3",
+    "child_process": "^1.0.2",
+    "fs": "^0.0.1-security",
+    "gettext.js": "^2.0.2",
+    "line-reader": "^0.4.0",
+    "minimist": "^1.2.8",
+    "path": "^0.12.7",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
