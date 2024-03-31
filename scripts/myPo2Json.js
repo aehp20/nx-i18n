@@ -11,6 +11,7 @@ const locale = argv.locale || "en";
 const locales = locale.split(",");
 
 const folder = `${path.dirname(__dirname)}/locale/`;
+const publicFolder = `${path.dirname(__dirname)}/public/translations/`;
 const regexp = /{\S+}/g;
 
 function prepareTranslation(str, regexp) {
@@ -46,6 +47,11 @@ locales.forEach(locale => {
         if (err) { throw err; }
         fs.unlink(`${folder}${tmpFile}`, function (err) {
           if (err) throw err;
+        });
+        fs.copyFile(`${folder}${jsonFile}`, `${publicFolder}${jsonFile}`, (err) => {
+          if (err) {
+            console.log("Copy File Error Found:", err);
+          }
         });
       })
     }

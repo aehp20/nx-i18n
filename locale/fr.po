@@ -96,4 +96,4 @@ msgstr[1] "Mon fils {name} a deux voiture"
 
 #: /Users/home/learn/github/nx-i18n/src/app/components/UserInfo.tsx:14
 msgid "My name is {firstName}"
-msgstr ""
+msgstr "Mon nom est {firstName}"
